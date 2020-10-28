@@ -10,14 +10,19 @@
     <script>
    
    const html ="<div class='container'><div class='row'>"+
-   "<div class='col'>"+
+   "<div class='col'><button onClick=' google.script.run.columnHelp' class='btn btn-primary col mt-3'>Get Current Column Info <small>(TODO)</small></button><hr/>"+
    "<h3><?= activeColumnName ?></h3>"+
    "<h6><?= activeSheetName ?> sheet</h6>"+
-   "<hr/><div><strong>Description:</strong>"+
+   "<hr/><div><strong>What does this field do?:</strong>"+
    "<div><?= description ?><div>"+
-    "<div><?= resRowIndexs ?><div>"+
+   "<hr/><div><strong>Cell Input Type:</strong>"+
+   "<div><?= input_type ?><div>"+
+    "<hr/><div><strong>Allowed cell value(s):</strong>"+
+   "<div><?= valTypes ?><div>"+
    "</div></div></div>"
        $("#data").html(html);
+       
+    
     </script>
   </body>
 </html>
